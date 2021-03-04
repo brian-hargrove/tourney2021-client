@@ -1,0 +1,17 @@
+.dropdown {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+  flex-direction: row;
+}
+/* 
+#collegeDropdown {
+  color: red;
+  background-color: red;
+  margin-right: 1000px;
+}
+#regionDropdown {
+  color: white;
+  background-color: black;
+  padding-left: 50px;
+} */
