@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
+import '../styles/teamInput.css';
 
 const TeamInput = props => {
   const [college, setCollege] = useState('');
@@ -10,7 +11,7 @@ const TeamInput = props => {
   const [colors, setColors] = useState('');
   const [headCoach, setHeadCoach] = useState('');
   const [overallWins, setOverallWins] = useState('');
-  const [overallLoss, setoverallLoss] = useState('');
+  const [overallLoss, setOverallLoss] = useState('');
   const [confWins, setConfWins] = useState('');
   const [confLoss, setConfLoss] = useState('');
   const [bid, setBid] = useState('');
@@ -31,6 +32,36 @@ const TeamInput = props => {
   const [color2, setColor2] = useState('');
   const [logoLink, setLogoLink] = useState('');
 
+  const resetForm = () => {
+    setCollege('');
+    setNickname('');
+    setCity('');
+    setState('');
+    setConference('');
+    setColors('');
+    setHeadCoach('');
+    setOverallWins('');
+    setOverallLoss('');
+    setConfWins('');
+    setConfLoss('');
+    setBid('');
+    setTotalApp('');
+    setLastApp('');
+    setNcaaWin('');
+    setNcaaLoss('');
+    setBestFinish('');
+    setRegion('');
+    setSeed('');
+    setSeedWin('');
+    setSeedLoss('');
+    setWebsiteLink('');
+    setScheduleLink('');
+    setRosterLink('');
+    setStatLink('');
+    setColor1('');
+    setColor2('');
+    setLogoLink('');
+  };
   const handleSubmit = event => {
     event.preventDefault();
 
@@ -75,34 +106,8 @@ const TeamInput = props => {
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        setCollege('');
-        setNickname('');
-        setCity('');
-        setState('');
-        setConference('');
-        setColors('');
-        setHeadCoach('');
-        setOverallWins('');
-        setoverallLoss('');
-        setConfWins('');
-        setConfLoss('');
-        setBid('');
-        setTotalApp('');
-        setLastApp('');
-        setNcaaWin('');
-        setNcaaLoss('');
-        setBestFinish('');
-        setRegion('');
-        setSeed('');
-        setSeedWin('');
-        setSeedLoss('');
-        setWebsiteLink('');
-        setScheduleLink('');
-        setRosterLink('');
-        setStatLink('');
-        setColor1('');
-        setColor2('');
-        setLogoLink('');
+        alert('Team info saved');
+        resetForm();
       });
   };
 
@@ -116,6 +121,7 @@ const TeamInput = props => {
             id="formCollege"
             placeholder="college"
             onChange={event => setCollege(event.target.value)}
+            // value={college}
           ></Input>
         </FormGroup>
         <FormGroup>
@@ -187,7 +193,7 @@ const TeamInput = props => {
             name="overallLoss"
             id="formOverallLoss"
             placeholder="Overall Loss"
-            onChange={event => setoverallLoss(event.target.value)}
+            onChange={event => setOverallLoss(event.target.value)}
           ></Input>
         </FormGroup>
         <FormGroup>
@@ -208,7 +214,7 @@ const TeamInput = props => {
             onChange={event => setConfLoss(event.target.value)}
           ></Input>
         </FormGroup>
-        <FormGroup id="formBid">
+        <FormGroup className="formBid">
           <Input
             type="radio"
             name="bid"
@@ -217,6 +223,8 @@ const TeamInput = props => {
             onChange={event => setBid(event.target.value)}
           ></Input>
           <Label htmlFor="formBidAuto">Automatic</Label>
+        </FormGroup>
+        <FormGroup className="formBid">
           <Input
             type="radio"
             name="bid"
@@ -271,39 +279,55 @@ const TeamInput = props => {
             onChange={event => setBestFinish(event.target.value)}
           ></Input>
         </FormGroup>
-        <FormGroup id="formRegion">
+
+        <FormGroup className="formRegion">
           <Input
             type="radio"
             name="region"
-            id="formRegion1"
+            // id="formRegion1"
             value="1"
             onChange={event => setRegion(event.target.value)}
           ></Input>
-          <Label htmlFor="formRegion1">Region 1</Label>
+          <Label htmlFor="formRegion1" className="formRegion" id="formRegion1">
+            Region 1
+          </Label>
+        </FormGroup>
+
+        <FormGroup className="formRegion">
           <Input
             type="radio"
             name="region"
-            id="formRegion2"
+            // id="formRegion2"
             value="2"
             onChange={event => setRegion(event.target.value)}
           ></Input>
-          <Label htmlFor="formRegion1">Region 2</Label>
+          <Label id="formRegion2" htmlFor="formRegion1" className="formRegion">
+            Region 2
+          </Label>
+        </FormGroup>
+        <FormGroup className="formRegion">
           <Input
             type="radio"
             name="region"
-            id="formRegion3"
+            // id="formRegion3"
             value="3"
             onChange={event => setRegion(event.target.value)}
           ></Input>
-          <Label htmlFor="formRegion1">Region 3</Label>
+          <Label htmlFor="formRegion1" className="formRegion" id="formRegion3">
+            Region 3
+          </Label>
+        </FormGroup>
+        <FormGroup className="formRegion">
           <Input
             type="radio"
             name="region"
-            id="formRegion4"
+            // id="formRegion4"
             value="4"
             onChange={event => setRegion(event.target.value)}
           ></Input>
-          <Label htmlFor="formRegion1">Region 4</Label>
+          <Label htmlFor="formRegion1" className="formRegion" id="formRegion4">
+            Region 4
+          </Label>
         </FormGroup>
         <FormGroup>
           <Input
@@ -392,7 +416,7 @@ const TeamInput = props => {
             name="logoLink"
             id="formLogoLink"
             placeholder="Logo Link"
-            onChange={event => setCollege(event.target.value)}
+            onChange={event => setLogoLink(event.target.value)}
           ></Input>
         </FormGroup>
         <Button type="submit" id="teamCreateBTN">

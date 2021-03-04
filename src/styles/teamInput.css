@@ -1,0 +1,11 @@
+.formBid {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  color: red;
+  margin-left: 25px;
+}
+
+.formRegion {
+  margin-left: 25px;
+}
