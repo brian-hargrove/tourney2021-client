@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   Button,
   Form,
+  FormGroup,
   Input,
   Label,
   Modal,
@@ -44,6 +45,8 @@ const ScheduleEdit = props => {
       }),
     }).then(response => {
       props.fetchSchedule();
+      props.updateOff();
+      alert('Score updated');
     });
   };
 
@@ -140,87 +143,3 @@ const ScheduleEdit = props => {
 };
 
 export default ScheduleEdit;
-// import React, { useState } from 'react';
-// import { Button, Table } from 'reactstrap';
-
-// const ScheduleUpdate = props => {
-//   const [date, setDate] = useState('');
-//   const [time, setTime] = useState('');
-//   const [tvStation, setTvStation] = useState('');
-//   const [region, setRegion] = useState('');
-//   const [round, setRound] = useState('');
-//   const [site, setSite] = useState('');
-//   const [team1, setTeam1] = useState('');
-//   const [score1, setScore1] = useState('');
-//   const [team2, setTeam2] = useState('');
-//   const [score2, setScore2] = useState('');
-//   const [schedule, setSchedule] = useState([]);
-//   const [scores, setScores] = useState([]);
-
-//   const fetchSchedule = () => {
-//     fetch('http://localhost:3000/score/', {
-//       method: 'GET',
-//       headers: new Headers({
-//         'Content-Type': 'application/json',
-//       }),
-//     })
-//       .then(response => response.json())
-//       .then(body => {
-//         setScores({ scores: body });
-//       })
-
-//       .catch(error => console.error(error));
-//   };
-
-//   const displaySchedule = () => {
-//     console.log(scores);
-//     return scores.map(scores => {
-//       return (
-//         <tr>
-//           <td>date</td>
-//           <td>2</td>
-//           <td>3</td>
-//           <td>4</td>
-//           <td>5</td>
-//           <td>6</td>
-//           <td>7</td>
-//           <td>8</td>
-//           <td>9</td>
-//           <td>10</td>
-//           <td>
-//             <Button>Update</Button>
-//           </td>
-//           <td>
-//             <Button>Delete</Button>
-//           </td>
-//         </tr>
-//       );
-//     });
-//   };
-
-//   return (
-//     <div>
-//       <Table striped>
-//         <thead>
-//           <tr>
-//             <th>Date</th>
-//             <th>Time</th>
-//             <th>TV Station</th>
-//             <th>Region</th>
-//             <th>Round</th>
-//             <th>Site</th>
-//             <th>Team 1</th>
-//             <th>Score 1</th>
-//             <th>Team 2</th>
-//             <th>Score 2</th>
-//             <th>Update</th>
-//             <th>Delete</th>
-//           </tr>
-//         </thead>
-//         <tbody>{setScores ? displaySchedule() : fetchSchedule()}</tbody>
-//       </Table>
-//     </div>
-//   );
-// };
-
-// export default ScheduleUpdate;

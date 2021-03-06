@@ -39,6 +39,17 @@ const ScheduleCreate = props => {
       .then(response => response.json())
       .then(data => {
         console.log(data);
+        setDate('');
+        setTime('');
+        setTvStation('');
+        setRegion('');
+        setRound('');
+        setSite('');
+        setTeam1('');
+        setScore1('');
+        setTeam2('');
+        setScore2('');
+        props.fetchSchedule();
         alert('Schedule info entered');
       });
   };
@@ -48,7 +59,7 @@ const ScheduleCreate = props => {
       <Form onSubmit={event => handleSubmit(event)}>
         <FormGroup>
           <Input
-            type="date"
+            type="text"
             name="date"
             id="createDate"
             placeholder="Date"
@@ -57,7 +68,7 @@ const ScheduleCreate = props => {
         </FormGroup>
         <FormGroup>
           <Input
-            type="test"
+            type="text"
             name="time"
             id="createTime"
             placeholder="Time"
