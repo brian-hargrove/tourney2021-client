@@ -13,6 +13,19 @@ const ScheduleCreate = props => {
   const [team2, setTeam2] = useState('');
   const [score2, setScore2] = useState('');
 
+  const resetForm = () => {
+    setDate();
+    setTime();
+    setTvStation();
+    setRegion();
+    setRound();
+    setSite();
+    setTeam1();
+    setScore1();
+    setTeam2();
+    setScore2();
+  };
+
   const handleSubmit = event => {
     event.preventDefault();
 
@@ -39,16 +52,7 @@ const ScheduleCreate = props => {
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        setDate('');
-        setTime('');
-        setTvStation('');
-        setRegion('');
-        setRound('');
-        setSite('');
-        setTeam1('');
-        setScore1('');
-        setTeam2('');
-        setScore2('');
+        resetForm();
         props.fetchSchedule();
         alert('Schedule info entered');
       });
@@ -59,7 +63,7 @@ const ScheduleCreate = props => {
       <Form onSubmit={event => handleSubmit(event)}>
         <FormGroup>
           <Input
-            type="text"
+            type="date"
             name="date"
             id="createDate"
             placeholder="Date"
@@ -90,6 +94,8 @@ const ScheduleCreate = props => {
             name="region"
             id="createRegion"
             placeholder="Region"
+            min="0"
+            max="5"
             onChange={event => setRegion(event.target.value)}
           ></Input>
         </FormGroup>
@@ -149,6 +155,9 @@ const ScheduleCreate = props => {
         </FormGroup>
         <Button type="submit" id="scoreCreateBTN">
           Submit
+        </Button>
+        <Button type="reset" id="resetButton">
+          Reset Form
         </Button>
       </Form>
     </div>

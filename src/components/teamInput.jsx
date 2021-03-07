@@ -33,34 +33,34 @@ const TeamInput = props => {
   const [logoLink, setLogoLink] = useState('');
 
   const resetForm = () => {
-    setCollege('');
-    setNickname('');
-    setCity('');
-    setState('');
-    setConference('');
-    setColors('');
-    setHeadCoach('');
-    setOverallWins('');
-    setOverallLoss('');
-    setConfWins('');
-    setConfLoss('');
-    setBid('');
-    setTotalApp('');
-    setLastApp('');
-    setNcaaWin('');
-    setNcaaLoss('');
-    setBestFinish('');
-    setRegion('');
-    setSeed('');
-    setSeedWin('');
-    setSeedLoss('');
-    setWebsiteLink('');
-    setScheduleLink('');
-    setRosterLink('');
-    setStatLink('');
-    setColor1('');
-    setColor2('');
-    setLogoLink('');
+    setCollege();
+    setNickname();
+    setCity();
+    setState();
+    setConference();
+    setColors();
+    setHeadCoach();
+    setOverallWins();
+    setOverallLoss();
+    setConfWins();
+    setConfLoss();
+    setBid();
+    setTotalApp();
+    setLastApp();
+    setNcaaWin();
+    setNcaaLoss();
+    setBestFinish();
+    setRegion();
+    setSeed();
+    setSeedWin();
+    setSeedLoss();
+    setWebsiteLink();
+    setScheduleLink();
+    setRosterLink();
+    setStatLink();
+    setColor1();
+    setColor2();
+    setLogoLink();
   };
   const handleSubmit = event => {
     event.preventDefault();
@@ -106,8 +106,8 @@ const TeamInput = props => {
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        alert('Team info saved');
         resetForm();
+        alert('Team info saved');
       });
   };
 
@@ -421,6 +421,9 @@ const TeamInput = props => {
         </FormGroup>
         <Button type="submit" id="teamCreateBTN">
           Submit
+        </Button>
+        <Button type="reset" id="teamResetBtn">
+          Reset
         </Button>
       </Form>
     </div>
