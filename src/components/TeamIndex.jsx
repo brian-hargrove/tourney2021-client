@@ -46,7 +46,7 @@ const TeamIndex = props => {
         <Col md="3">
           <TeamInput fetchTeam={fetchTeam} />
         </Col>
-        <Col sm="9">
+        <Col md="9">
           <TeamTable
             teams={teams}
             editUpdateTeam={editUpdateTeam}

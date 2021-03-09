@@ -15,7 +15,7 @@ const ScheduleTable = props => {
     return props.scores.map((score, index) => {
       return (
         <tr key={index}>
-          <th scope="row">{score.id}</th>
+          {/* <th scope="row">{score.id}</th> */}
           <td>{score.date}</td>
           <td>{score.time}</td>
           <td>{score.tvStation}</td>
@@ -56,7 +56,7 @@ const ScheduleTable = props => {
       <Table striped>
         <thead>
           <tr>
-            <th>#</th>
+            {/* <th>#</th> */}
             <th>Date</th>
             <th>Time</th>
             <th>TV Station</th>

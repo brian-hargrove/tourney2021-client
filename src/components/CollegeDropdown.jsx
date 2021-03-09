@@ -24,7 +24,6 @@ const CollegeDropdown = () => {
       .then(data => setData(data))
       .catch(error => console.log(error));
     console.log(data);
-    return dropdownSchool;
   };
 
   console.log(dropdownSchool.data);
@@ -39,7 +38,7 @@ const CollegeDropdown = () => {
           <DropdownToggle caret>COLLEGE</DropdownToggle>
           <DropdownMenu id="collegeDropdown">
             <DropdownItem header>SCHOOL LIST</DropdownItem>
-            <DropdownItem>school</DropdownItem>
+            <DropdownItem>{dropdownSchool}</DropdownItem>
             <DropdownItem text>Dropdown Item Text</DropdownItem>
             <DropdownItem divider />
             <DropdownItem>Foo Action</DropdownItem>
