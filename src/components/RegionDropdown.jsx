@@ -5,9 +5,11 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
+
 import '../styles/Navbar.css';
 
-const RegionDropdown = () => {
+const RegionDropdown = props => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggle = () => setDropdownOpen(prevState => !prevState);
@@ -21,10 +23,14 @@ const RegionDropdown = () => {
           <Dropdown isOpen={dropdownOpen} toggle={toggle}>
             <DropdownToggle caret>REGION</DropdownToggle>
             <DropdownMenu id="regionDropdown">
-              <DropdownItem>Region 1</DropdownItem>
-              <DropdownItem>Region 2</DropdownItem>
-              <DropdownItem>Region 3</DropdownItem>
-              <DropdownItem>Region 4</DropdownItem>
+              <DropdownItem>
+                <Link to="/region" value="1">
+                  Region 1
+                </Link>
+              </DropdownItem>
+              <DropdownItem value="2">Region 2</DropdownItem>
+              <DropdownItem value="3">Region 3</DropdownItem>
+              <DropdownItem value="4">Region 4</DropdownItem>
             </DropdownMenu>
           </Dropdown>
         </div>

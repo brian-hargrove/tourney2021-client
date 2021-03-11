@@ -1,16 +1,18 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 
+import Home from './components/Home';
 // import TeamInput from './components/teamInput';
-// import TeamIndex from './components/TeamIndex';
+import TeamIndex from './components/TeamIndex';
 import ScoreTable from './components/Schedule';
 // import TeamTable from './components/TeamTable';
 // import ScheduleCreate from './components/ScoreScheduleCreate';
 // import ScheduleUpdate from './components/ScoreScheduleUpdate';
 // import ScheduleTable from './components/ScoreScheduleTable';
-// import ScheduleIndex from './components/ScheduleIndex';
+import ScheduleIndex from './components/ScheduleIndex';
+import RegionTable from './views/Region';
 
 // import Home from './components/Home';
 
@@ -18,14 +20,15 @@ function App() {
   return (
     <Router>
       <Navbar />
-      {/* <TeamIndex /> */}
-      <ScoreTable />
-      {/* <TeamTable /> */}
-      {/* <TeamInput /> */}
-      {/* <ScheduleCreate /> */}
-      {/* <ScheduleUpdate /> */}
-      {/* <ScheduleTable /> */}
-      {/* <ScheduleIndex /> */}
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/region" exact component={RegionTable} />
+        <Route path="/schedule" exact component={ScoreTable} />
+        <Route path="/teamTable" exact component={TeamIndex} />
+        <Route path="/scheduleTable" exact component={ScheduleIndex} />
+        {/* <Route path="/" exact component={} /> */}
+        {/* <Route path="/" exact component={} /> */}
+      </Switch>
     </Router>
   );
 }

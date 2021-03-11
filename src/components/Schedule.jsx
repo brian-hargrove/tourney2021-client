@@ -7,7 +7,7 @@ const ScoreTable = props => {
   const [scheduleData, setScheduleData] = useState([]);
 
   const fetchSchedule = async () => {
-    await fetch(`http://localhost:3000/score`, {
+    await fetch(`http://localhost:3000/score/`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',
