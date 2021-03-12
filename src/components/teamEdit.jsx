@@ -111,7 +111,7 @@ const TeamEdit = props => {
             <Input
               name="college"
               value={editCollege}
-              onchange={event => setEditCollege(event.target.value)}
+              onChange={event => setEditCollege(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -119,7 +119,7 @@ const TeamEdit = props => {
             <Input
               name="nickname"
               value={editNickname}
-              onchange={event => setEditNickname(event.target.value)}
+              onChange={event => setEditNickname(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -127,7 +127,7 @@ const TeamEdit = props => {
             <Input
               name="city"
               value={editCity}
-              onchange={event => setEditCity(event.target.value)}
+              onChange={event => setEditCity(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -135,7 +135,7 @@ const TeamEdit = props => {
             <Input
               name="state"
               value={editState}
-              onchange={event => setEditState(event.target.value)}
+              onChange={event => setEditState(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -143,7 +143,7 @@ const TeamEdit = props => {
             <Input
               name="conference"
               value={editConference}
-              onchange={event => setEditConference(event.target.value)}
+              onChange={event => setEditConference(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -151,7 +151,7 @@ const TeamEdit = props => {
             <Input
               name="colors"
               value={editColors}
-              onchange={event => setEditColors(event.target.value)}
+              onChange={event => setEditColors(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -159,7 +159,7 @@ const TeamEdit = props => {
             <Input
               name="headCoach"
               value={editHeadCoach}
-              onchange={event => setEditHeadCoach(event.target.value)}
+              onChange={event => setEditHeadCoach(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -167,7 +167,7 @@ const TeamEdit = props => {
             <Input
               name="overallWins"
               value={editOverallWins}
-              onchange={event => setEditOverallWins(event.target.value)}
+              onChange={event => setEditOverallWins(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -175,7 +175,7 @@ const TeamEdit = props => {
             <Input
               name="overallLoss"
               value={editOverallLoss}
-              onchange={event => setEditOverallLoss(event.target.value)}
+              onChange={event => setEditOverallLoss(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -183,7 +183,7 @@ const TeamEdit = props => {
             <Input
               name="confWins"
               value={editConfWins}
-              onchange={event => setEditConfWins(event.target.value)}
+              onChange={event => setEditConfWins(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -191,7 +191,7 @@ const TeamEdit = props => {
             <Input
               name="confLoss"
               value={editConfLoss}
-              onchange={event => setEditConfLoss(event.target.value)}
+              onChange={event => setEditConfLoss(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -199,7 +199,7 @@ const TeamEdit = props => {
             <Input
               name="bid"
               value={editBid}
-              onchange={event => setEditBid(event.target.value)}
+              onChange={event => setEditBid(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -207,7 +207,7 @@ const TeamEdit = props => {
             <Input
               name="totalApp"
               value={editTotalApp}
-              onchange={event => setEditTotalApp(event.target.value)}
+              onChange={event => setEditTotalApp(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -215,7 +215,7 @@ const TeamEdit = props => {
             <Input
               name="lastApp"
               value={editLastApp}
-              onchange={event => setEditLastApp(event.target.value)}
+              onChange={event => setEditLastApp(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -223,7 +223,7 @@ const TeamEdit = props => {
             <Input
               name="ncaaWin"
               value={editNcaaWin}
-              onchange={event => setEditNcaaWin(event.target.value)}
+              onChange={event => setEditNcaaWin(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -231,7 +231,7 @@ const TeamEdit = props => {
             <Input
               name="ncaaLoss"
               value={editNcaaLoss}
-              onchange={event => setEditNcaaLoss(event.target.value)}
+              onChange={event => setEditNcaaLoss(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -239,7 +239,7 @@ const TeamEdit = props => {
             <Input
               name="bestFinish"
               value={editBestFinish}
-              onchange={event => setEditBestFinish(event.target.value)}
+              onChange={event => setEditBestFinish(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -247,7 +247,7 @@ const TeamEdit = props => {
             <Input
               name="region"
               value={editRegion}
-              onchange={event => setEditRegion(event.target.value)}
+              onChange={event => setEditRegion(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -255,7 +255,7 @@ const TeamEdit = props => {
             <Input
               name="seed"
               value={editSeed}
-              onchange={event => setEditSeed(event.target.value)}
+              onChange={event => setEditSeed(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -263,7 +263,7 @@ const TeamEdit = props => {
             <Input
               name="seedWin"
               value={editSeedWin}
-              onchange={event => setEditSeedWin(event.target.value)}
+              onChange={event => setEditSeedWin(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -271,7 +271,7 @@ const TeamEdit = props => {
             <Input
               name="seedLoss"
               value={editSeedLoss}
-              onchange={event => setEditSeedLoss(event.target.value)}
+              onChange={event => setEditSeedLoss(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -279,7 +279,7 @@ const TeamEdit = props => {
             <Input
               name="websiteLink"
               value={editWebsiteLink}
-              onchange={event => setEditWebsiteLink(event.target.value)}
+              onChange={event => setEditWebsiteLink(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -287,7 +287,7 @@ const TeamEdit = props => {
             <Input
               name="scheduleLink"
               value={editScheduleLink}
-              onchange={event => setEditScheduleLink(event.target.value)}
+              onChange={event => setEditScheduleLink(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -295,7 +295,7 @@ const TeamEdit = props => {
             <Input
               name="rosterLink"
               value={editRosterLink}
-              onchange={event => setEditRosterLink(event.target.value)}
+              onChange={event => setEditRosterLink(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -303,7 +303,7 @@ const TeamEdit = props => {
             <Input
               name="statLink"
               value={editStatLink}
-              onchange={event => setEditStatLink(event.target.value)}
+              onChange={event => setEditStatLink(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -311,7 +311,7 @@ const TeamEdit = props => {
             <Input
               name="color1"
               value={editColor1}
-              onchange={event => setEditColor1(event.target.value)}
+              onChange={event => setEditColor1(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -319,7 +319,7 @@ const TeamEdit = props => {
             <Input
               name="color2"
               value={editColor2}
-              onchange={event => setEditColor2(event.target.value)}
+              onChange={event => setEditColor2(event.target.value)}
             />
           </FormGroup>
           <FormGroup>
@@ -327,7 +327,7 @@ const TeamEdit = props => {
             <Input
               name="logoLink"
               value={editLogoLink}
-              onchange={event => setEditLogoLink(event.target.value)}
+              onChange={event => setEditLogoLink(event.target.value)}
             />
           </FormGroup>
           <Button type="submit">Update Team Info</Button>

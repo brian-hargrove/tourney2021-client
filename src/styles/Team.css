@@ -1,0 +1,23 @@
+.teamGrid {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+.teamCardBody {
+  text-align: center;
+  border: 2px solid black;
+  padding: 30px;
+}
+/* 
+.teamCardTitle {
+  font-size: 30px;
+  text-align: center;
+}
+
+.teamCardSubtitle {
+  font-size: 24px;
+  text-align: center;
+} */
