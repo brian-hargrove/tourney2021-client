@@ -236,7 +236,7 @@ const TeamInput = props => {
         </FormGroup>
         <FormGroup>
           <Input
-            type="number"
+            type="text"
             name="totalApp"
             id="formTotalApp"
             placeholder="Total Appearances"
@@ -285,11 +285,11 @@ const TeamInput = props => {
             type="radio"
             name="region"
             // id="formRegion1"
-            value="1"
+            value="East"
             onChange={event => setRegion(event.target.value)}
           ></Input>
           <Label htmlFor="formRegion1" className="formRegion" id="formRegion1">
-            Region 1
+            East
           </Label>
         </FormGroup>
 
@@ -298,11 +298,11 @@ const TeamInput = props => {
             type="radio"
             name="region"
             // id="formRegion2"
-            value="2"
+            value="Midwest"
             onChange={event => setRegion(event.target.value)}
           ></Input>
           <Label id="formRegion2" htmlFor="formRegion1" className="formRegion">
-            Region 2
+            Midwest
           </Label>
         </FormGroup>
         <FormGroup className="formRegion">
@@ -310,11 +310,11 @@ const TeamInput = props => {
             type="radio"
             name="region"
             // id="formRegion3"
-            value="3"
+            value="South"
             onChange={event => setRegion(event.target.value)}
           ></Input>
           <Label htmlFor="formRegion1" className="formRegion" id="formRegion3">
-            Region 3
+            South
           </Label>
         </FormGroup>
         <FormGroup className="formRegion">
@@ -322,11 +322,11 @@ const TeamInput = props => {
             type="radio"
             name="region"
             // id="formRegion4"
-            value="4"
+            value="West"
             onChange={event => setRegion(event.target.value)}
           ></Input>
           <Label htmlFor="formRegion1" className="formRegion" id="formRegion4">
-            Region 4
+            West
           </Label>
         </FormGroup>
         <FormGroup>

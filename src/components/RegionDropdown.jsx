@@ -11,10 +11,12 @@ import '../styles/Navbar.css';
 
 const RegionDropdown = props => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
+  const [dropValue, setDropValue] = useState();
   const toggle = () => setDropdownOpen(prevState => !prevState);
-  // need to pull college inform from team database
-  // populate database from college column from team database
+
+  const saveDropValue = value => {
+    setDropValue(value);
+  };
 
   return (
     <div>
@@ -24,13 +26,55 @@ const RegionDropdown = props => {
             <DropdownToggle caret>REGION</DropdownToggle>
             <DropdownMenu id="regionDropdown">
               <DropdownItem>
-                <Link to="/region" value="1">
+                <Link
+                  to="/region"
+                  value="2"
+                  onClick={event => setDropValue(2)}
+                  saveDropValue={saveDropValue}
+                >
                   Region 1
                 </Link>
               </DropdownItem>
-              <DropdownItem value="2">Region 2</DropdownItem>
-              <DropdownItem value="3">Region 3</DropdownItem>
-              <DropdownItem value="4">Region 4</DropdownItem>
+              {/* <DropdownItem>
+                <Link
+                  to="/region"
+                  value="2"
+                  // onClick={event => setDropValue(event.target.value)}
+                  // saveDropValue={dropValue}
+                >
+                  Region 2
+                </Link>
+              </DropdownItem>
+              <DropdownItem>
+                <Link
+                  to="/region"
+                  value="3"
+                  // onClick={event => setDropValue(event.target.value)}
+                  // saveDropValue={dropValue}
+                >
+                  Region 3
+                </Link>
+              </DropdownItem>
+              <DropdownItem>
+                <Link
+                  to="/region"
+                  value="4"
+                  // onClick={event => setDropValue(event.target.value)}
+                  // saveDropValue={dropValue}
+                >
+                  Region 4
+                </Link>
+              </DropdownItem>
+              <DropdownItem>
+                <Link
+                  to="/region"
+                  value="5"
+                  // onClick={event => setDropValue(event.target.value)}
+                  // saveDropValue={dropValue}
+                >
+                  Final Four/Championship
+                </Link>
+              </DropdownItem> */}
             </DropdownMenu>
           </Dropdown>
         </div>

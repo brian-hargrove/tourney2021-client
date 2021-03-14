@@ -90,12 +90,10 @@ const ScheduleCreate = props => {
         </FormGroup>
         <FormGroup>
           <Input
-            type="number"
+            type="text"
             name="region"
             id="createRegion"
             placeholder="Region"
-            min="0"
-            max="5"
             onChange={event => setRegion(event.target.value)}
           ></Input>
         </FormGroup>

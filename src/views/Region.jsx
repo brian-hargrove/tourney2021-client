@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'reactstrap';
 
-const RegionTable = () => {
+const RegionTable = props => {
   const [regions, setRegions] = useState([]);
 
   useEffect(() => {
@@ -9,7 +9,7 @@ const RegionTable = () => {
   }, []);
 
   const fetchRegions = async () => {
-    await fetch(`http://localhost:3000/score/1`, {
+    await fetch(`http://localhost:3000/score/region/2`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ const RegionTable = () => {
       <div>
         <h2>Schedule</h2>
         <hr />
-        <table size="md">
+        <Table size="md">
           <thead>
             <tr>
               <th>Date</th>
@@ -60,7 +60,7 @@ const RegionTable = () => {
             </tr>
           </thead>
           <tbody displayRegion={displayRegion}>{displayRegion}</tbody>
-        </table>
+        </Table>
       </div>
     </>
   );

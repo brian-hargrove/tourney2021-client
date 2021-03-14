@@ -7,13 +7,14 @@ import Home from './components/Home';
 // import TeamInput from './components/teamInput';
 import TeamIndex from './components/TeamIndex';
 import ScoreTable from './components/Schedule';
-import TeamLineup from './views/Team';
+import TeamLineup from './components/SchoolTable';
 // import TeamTable from './components/TeamTable';
 // import ScheduleCreate from './components/ScoreScheduleCreate';
 // import ScheduleUpdate from './components/ScoreScheduleUpdate';
 // import ScheduleTable from './components/ScoreScheduleTable';
 import ScheduleIndex from './components/ScheduleIndex';
 import RegionTable from './views/Region';
+import SchoolIndex from './components/SchoolIndex';
 
 // import Home from './components/Home';
 
@@ -28,7 +29,7 @@ function App() {
         <Route path="/schedule" exact component={ScoreTable} />
         <Route path="/teamTable" exact component={TeamIndex} />
         <Route path="/scheduleTable" exact component={ScheduleIndex} />
-        {/* <Route path="/" exact component={} /> */}
+        <Route path="/schoolinfo" exact component={SchoolIndex} />
         {/* <Route path="/" exact component={} /> */}
       </Switch>
     </Router>

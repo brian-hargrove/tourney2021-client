@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'reactstrap';
 
+import RegionDropdown from '../components/RegionDropdown';
+
 // import ScheduleTable from './ScoreScheduleTable';
 
 const ScoreTable = props => {
@@ -26,11 +28,11 @@ const ScoreTable = props => {
 
   const displaySchedule = scheduleData.map(scheduleData => {
     console.log(scheduleData);
+
     return (
       <tr>
         <td>{scheduleData.date}</td>
         <td>{scheduleData.time}</td>
-        <td>{scheduleData.tvStation}</td>
         <td>{scheduleData.region}</td>
         <td>{scheduleData.round}</td>
         <td>{scheduleData.site}</td>
@@ -46,6 +48,7 @@ const ScoreTable = props => {
     <div>
       <h2>Schedule</h2>
       <hr />
+      <RegionDropdown />
       <Table size="md">
         <thead>
           <th>Date</th>

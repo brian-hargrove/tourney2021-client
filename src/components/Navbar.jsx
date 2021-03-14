@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import '../styles/Navbar.css';
 // import CollegeDropdown from './CollegeDropdown';
-import RegionDropdown from './RegionDropdown';
+// import RegionDropdown from './RegionDropdown';
 
 const Navbar = () => {
   return (
@@ -11,13 +11,16 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="dropdown">
           {/* <CollegeDropdown /> */}
-          <RegionDropdown />
+          {/* <RegionDropdown /> */}
         </div>
         <li>
           <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/teamlineup">Schools</Link>
+        </li>
+        <li>
+          <Link to="/schoolInfo">School Info</Link>
         </li>
         <li>
           <Link to="/schedule">Schedule</Link>
