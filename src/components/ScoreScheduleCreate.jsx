@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Form, FormGroup, Input } from 'reactstrap';
+import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
 
 const ScheduleCreate = props => {
   const [date, setDate] = useState('');
@@ -106,7 +106,102 @@ const ScheduleCreate = props => {
             onChange={event => setRound(event.target.value)}
           ></Input>
         </FormGroup>
-        <FormGroup>
+
+        <FormGroup className="formSite">
+          <Input
+            type="radio"
+            name="site"
+            value="Bankers Life Fieldhouse"
+            onChange={event => setSite(event.target.value)}
+          ></Input>
+          <Label
+            htmlFor="formSiteBankers"
+            className="formSite"
+            id="formSiteBankers"
+          >
+            Bankers Life Fieldhouse
+          </Label>
+        </FormGroup>
+
+        <FormGroup className="formSite">
+          <Input
+            type="radio"
+            name="site"
+            value="Hinkle Fieldhouse"
+            onChange={event => setSite(event.target.value)}
+          ></Input>
+          <Label
+            id="formSiteHinkle"
+            htmlFor="formSite"
+            className="formSiteHinkle"
+          >
+            Hinkle Fieldhouse
+          </Label>
+        </FormGroup>
+        <FormGroup className="formSite">
+          <Input
+            type="radio"
+            name="site"
+            value="Indiana Farmers Coliseum"
+            onChange={event => setSite(event.target.value)}
+          ></Input>
+          <Label
+            htmlFor="formSiteFarmers"
+            className="formSite"
+            id="formSiteFarmers"
+          >
+            Indiana Farmers Coliseum
+          </Label>
+        </FormGroup>
+        <FormGroup className="formSite">
+          <Input
+            type="radio"
+            name="site"
+            value="Lucas Oil Stadium"
+            onChange={event => setSite(event.target.value)}
+          ></Input>
+          <Label
+            htmlFor="formSiteLucas"
+            className="formSite"
+            id="formSiteLucas"
+          >
+            Lucas Oil Stadium
+          </Label>
+        </FormGroup>
+
+        <FormGroup className="formSite">
+          <Input
+            type="radio"
+            name="site"
+            value="Mackey Arena"
+            onChange={event => setSite(event.target.value)}
+          ></Input>
+          <Label
+            htmlFor="formSiteMackey"
+            className="formSite"
+            id="formSiteMackey"
+          >
+            Mackey Arena
+          </Label>
+        </FormGroup>
+
+        <FormGroup className="formSite">
+          <Input
+            type="radio"
+            name="site"
+            value="Simon Skjodt Assembly Hall"
+            onChange={event => setSite(event.target.value)}
+          ></Input>
+          <Label
+            htmlFor="formSiteAssembly"
+            className="formSite"
+            id="formSiteAssembly"
+          >
+            Simon Skjodt Assembly Hall
+          </Label>
+        </FormGroup>
+
+        {/* <FormGroup>
           <Input
             type="text"
             name="site"
@@ -114,7 +209,7 @@ const ScheduleCreate = props => {
             placeholder="Site/Arena"
             onChange={event => setSite(event.target.value)}
           ></Input>
-        </FormGroup>
+        </FormGroup> */}
         <FormGroup>
           <Input
             type="text"

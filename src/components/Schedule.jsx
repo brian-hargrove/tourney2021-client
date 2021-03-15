@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'reactstrap';
 
-import RegionDropdown from '../components/RegionDropdown';
+// import RegionDropdown from '../components/RegionDropdown';
 
 // import ScheduleTable from './ScoreScheduleTable';
 
@@ -48,7 +48,7 @@ const ScoreTable = props => {
     <div>
       <h2>Schedule</h2>
       <hr />
-      <RegionDropdown />
+      {/* <RegionDropdown /> */}
       <Table size="md">
         <thead>
           <th>Date</th>
