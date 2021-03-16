@@ -74,10 +74,7 @@ const TeamLineup = props => {
   // export default TeamLineup;
 
   const [school, setSchool] = useState([]);
-
-  useEffect(() => {
-    fetchTeams();
-  }, []);
+  const [college, setCollege] = useState([]);
 
   const fetchTeams = async () => {
     await fetch(`http://localhost:3000/team/`, {
@@ -92,6 +89,36 @@ const TeamLineup = props => {
         console.log(schoolInfo);
       })
       .catch(error => console.error(error));
+  };
+
+  useEffect(() => {
+    fetchTeams();
+    // handleClick();
+  }, []);
+
+  const handleClick = async event => {
+    event.preventDefault();
+    // await fetch(`http://localhost:3000/team/`, {
+    //   method: 'GET',
+    //   headers: new Headers({
+    //     'Content-Type': 'application/json',
+    //   }),
+    // })
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     let schoolid = data.college;
+
+    await fetch(`http://localhost:3000/team/school/${school.college}`, {
+      method: 'GET',
+      headers: new Headers({
+        'Content-Type': 'application/json',
+      }),
+    })
+      .then(response => response.json())
+      .then(college => setCollege(college));
+    // }
+    // );
+    console.log('college', college).catch(error => console.log(error));
   };
 
   const displaySchoolCards = school.map(schoolInfo => {
@@ -127,10 +154,13 @@ const TeamLineup = props => {
           </CardSubtitle>
           <Button
             color="light"
-            onClick={() => {
-              props.fetchSchoolInfo();
-              props.infoOn();
+            onClick={event => {
+              handleClick();
             }}
+            // onClick={() => {
+            //   props.fetchSchoolInfo();
+            //   props.infoOn();
+            // }}
           >
             More Info
           </Button>

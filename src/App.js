@@ -25,6 +25,8 @@ import IndianaFarmersSiteTable from './views/Sites/IndianaFarmers';
 import MackeySiteTable from './views/Sites/MackeySite';
 import LucasOilSiteTable from './views/Sites/LucasOilSite';
 import HinkleSiteTable from './views/Sites/HinkleSite';
+// import CollegeMoreInfo from './components/CollegeIndex';
+import CollegeIndex from './components/CollegeIndex';
 
 // import Home from './components/Home';
 
@@ -70,6 +72,7 @@ function App() {
         />
         <Route path="/site/mackeyarena" exact component={MackeySiteTable} />
         <Route path="/site/assemblyhall" exact component={AssemblySiteTable} />
+        <Route path="/collegeinfo" exact component={CollegeIndex} />
       </Switch>
     </Router>
   );
