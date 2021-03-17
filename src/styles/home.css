@@ -1,0 +1,9 @@
+.page {
+  background-image: url('../assests/bigBracket.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 0px;
+  max-width: 100%;
+  font-weight: bolder;
+}

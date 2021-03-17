@@ -14,22 +14,34 @@ const Navbar = () => {
           <RegionDropdown />
         </div>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" className="link">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/collegeinfo">Colleges</Link>
+          <Link to="/collegeinfo" className="link">
+            Colleges
+          </Link>
         </li>
         <li>
-          <Link to="/calendar">Calendar</Link>
+          <Link to="/calendar" className="link">
+            Calendar
+          </Link>
         </li>
         <li>
-          <Link to="/schedule">Schedule</Link>
+          <Link to="/schedule" className="link">
+            Schedule
+          </Link>
         </li>
         <li>
-          <Link to="/teamtable">Team Input</Link>
+          <Link to="/teamtable" className="link">
+            Team Input
+          </Link>
         </li>
         <li>
-          <Link to="/scheduletable">Schedule Update</Link>
+          <Link to="/scheduletable" className="link">
+            Schedule Update
+          </Link>
         </li>
       </nav>
     </>
