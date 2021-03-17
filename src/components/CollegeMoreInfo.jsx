@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
+import '../styles/collegeMoreInfo.css';
 
 const CollegeMoreInfo = props => {
   const { buttonLabel, className } = props;
@@ -8,20 +9,6 @@ const CollegeMoreInfo = props => {
   const toggleModal = e => {
     setModalOpen(!modalOpen);
   };
-
-  const handleClose = e => {
-    setModalOpen(false);
-  };
-
-  //   const externalCloseBtn = (
-  //     <button
-  //       className="close"
-  //       style={{ position: 'absolute', top: '15px', right: '15px' }}
-  //       onClick={toggle}
-  //     >
-  //       &times;
-  //     </button>
-  //   );
 
   const teamMoreInfo = (event, team) => {
     event.preventDefault();
@@ -35,33 +22,44 @@ const CollegeMoreInfo = props => {
       props.fetchColleges();
       props.moreInfoOff();
     });
-    // setModalOpen(true);
   };
 
   return (
-    <Modal
-      isOpen={toggleModal}
-      //   toggle={toggleModal}
-      //   className={className}
-      //   external={externalCloseBtn}
-    >
+    <Modal isOpen={toggleModal}>
       <ModalHeader
         style={{
-          backgroundColor: `${props.moreTeamInfo.color2}`,
-          color: `${props.moreTeamInfo.color1}`,
+          backgroundColor: `${props.moreTeamInfo.color1}`,
+          color: `${props.moreTeamInfo.color2}`,
         }}
       >
-        <span>{props.moreTeamInfo.college}</span>
+        <span style={{ textAlign: 'center', fontSize: '30px' }}>
+          {props.moreTeamInfo.college}
+        </span>
       </ModalHeader>
       <ModalBody
         style={{
-          backgroundColor: `${props.moreTeamInfo.color2}`,
-          color: `${props.moreTeamInfo.color1}`,
+          backgroundColor: `${props.moreTeamInfo.color1}`,
+          color: `${props.moreTeamInfo.color2}`,
         }}
       >
         <h4>
-          {props.moreTeamInfo.city}, {props.moreTeamInfo.state}
+          Location: {props.moreTeamInfo.city}, {props.moreTeamInfo.state}
         </h4>
+        <h4>Head Coach: {props.moreTeamInfo.headCoach}</h4>
+        <h4>School Colors: {props.moreTeamInfo.colors}</h4>
+        <hr />
+        <h4>NCAA HISTORY</h4>
+        <p>
+          This will be {props.moreTeamInfo.college}'s{' '}
+          {props.moreTeamInfo.totalApp} tourney appearance.
+        </p>
+        {/* <h5>Total Appearance:{props.moreTeamInfo.totalApp}</h5> */}
+        <h5>Last Appearance: {props.moreTeamInfo.lastApp}</h5>
+        <h5>Best Finish: {props.moreTeamInfo.bestFinish}</h5>
+        <h5>
+          Tournament Record: {props.moreTeamInfo.ncaaWin} -{' '}
+          {props.moreTeamInfo.ncaaLoss}
+        </h5>
       </ModalBody>
       <ModalFooter>
         <Button color="secondary" onClick={props.moreInfoOff}>

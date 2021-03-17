@@ -21,17 +21,26 @@ const CollegeCards = props => {
           <CardSubtitle className="teamCardSubtitle">
             <h4>{schoolInfo.nickname}</h4>
           </CardSubtitle>
-          <CardSubtitle className="teamCardSubtitle">
-            <h5>{schoolInfo.conference}</h5>
-          </CardSubtitle>
+          <hr />
           <CardSubtitle className="teamCardSubtitle">
             <h5>
               Region: {schoolInfo.region}, Seed: {schoolInfo.seed}
             </h5>
           </CardSubtitle>
           <CardSubtitle className="teamCardSubtitle">
+            <h5>Bid: {schoolInfo.bid}</h5>
+          </CardSubtitle>
+          <hr />
+          <CardSubtitle className="teamCardSubtitle">
             <h5>
-              Record {schoolInfo.overallWins} - {schoolInfo.overallLoss}
+              Overall Record {schoolInfo.overallWins} - {schoolInfo.overallLoss}
+            </h5>
+            <hr />
+            <CardSubtitle className="teamCardSubtitle">
+              <h5>{schoolInfo.conference}</h5>
+            </CardSubtitle>
+            <h5>
+              Conference Record {schoolInfo.confWins} - {schoolInfo.confLoss}
             </h5>
           </CardSubtitle>
           <Button
