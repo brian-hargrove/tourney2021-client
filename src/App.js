@@ -27,6 +27,18 @@ import LucasOilSiteTable from './views/Sites/LucasOilSite';
 import HinkleSiteTable from './views/Sites/HinkleSite';
 // import CollegeMoreInfo from './components/CollegeIndex';
 import CollegeIndex from './components/CollegeIndex';
+import March18 from './views/Days/March18';
+import March19 from './views/Days/March19';
+import March20 from './views/Days/March20';
+import March21 from './views/Days/March21';
+import March22 from './views/Days/March22';
+import March27 from './views/Days/March27';
+import March28 from './views/Days/March28';
+import March29 from './views/Days/March29';
+import March30 from './views/Days/March30';
+import April03 from './views/Days/April03';
+import April05 from './views/Days/April05';
+import Calendar from './components/Calendar';
 
 // import Home from './components/Home';
 
@@ -73,6 +85,18 @@ function App() {
         <Route path="/site/mackeyarena" exact component={MackeySiteTable} />
         <Route path="/site/assemblyhall" exact component={AssemblySiteTable} />
         <Route path="/collegeinfo" exact component={CollegeIndex} />
+        <Route path="/march18" exact component={March18} />
+        <Route path="/march19" exact component={March19} />
+        <Route path="/march20" exact component={March20} />
+        <Route path="/march21" exact component={March21} />
+        <Route path="/march22" exact component={March22} />
+        <Route path="/march27" exact component={March27} />
+        <Route path="/march28" exact component={March28} />
+        <Route path="/march29" exact component={March29} />
+        <Route path="/march30" exact component={March30} />
+        <Route path="/april03" exact component={April03} />
+        <Route path="/april05" exact component={April05} />
+        <Route path="/calendar" exact component={Calendar} />
       </Switch>
     </Router>
   );

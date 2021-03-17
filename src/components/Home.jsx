@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Table } from 'reactstrap';
+// import { Table } from 'reactstrap';
+import Calendar from './Calendar';
 
 const Home = props => {
   return (
     <div>
-      <Table>
+      <Calendar />
+
+      {/* <Table>
         <thead>
           <tr>
             <th>Sunday</th>
@@ -54,7 +57,7 @@ const Home = props => {
             <td></td>
           </tr>
         </tbody>
-      </Table>
+      </Table> */}
     </div>
   );
 };
