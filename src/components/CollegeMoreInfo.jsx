@@ -62,6 +62,9 @@ const CollegeMoreInfo = props => {
         </h5>
       </ModalBody>
       <ModalFooter>
+        {/* <p>
+          <a href="{props.moreTeamInfo.websiteLink}">Athletic Website</a>
+        </p> */}
         <Button color="secondary" onClick={props.moreInfoOff}>
           Close
         </Button>
