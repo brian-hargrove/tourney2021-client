@@ -35,6 +35,16 @@ const Navbar = () => {
             Schedule Update
           </Link>
         </oi>
+        <oi>
+          <Link to="schedulecreate" classname="link">
+            Scheduele Create
+          </Link>
+        </oi>
+        <oi>
+          <Link to="teaminput" classname="link">
+            Team Create
+          </Link>
+        </oi>
       </nav>
     </>
   );

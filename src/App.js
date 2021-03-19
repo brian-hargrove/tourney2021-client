@@ -34,6 +34,8 @@ import April03 from './views/Days/April03';
 import April05 from './views/Days/April05';
 import Calendar from './components/Calendar';
 
+import ScheduleCreate from './components/ScoreScheduleCreate';
+import TeamInput from './components/teamInput';
 function App() {
   return (
     <>
@@ -94,6 +96,8 @@ function App() {
           <Route path="/april03" exact component={April03} />
           <Route path="/april05" exact component={April05} />
           <Route path="/calendar" exact component={Calendar} />
+          <Route path="/schedulecreate" exact component={ScheduleCreate} />
+          <Route path="/teaminput" exact component={TeamInput} />
         </Switch>
       </Router>
     </>
