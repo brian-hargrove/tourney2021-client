@@ -30,12 +30,15 @@ const TeamLineup = props => {
   const handleClick = async event => {
     event.preventDefault();
 
-    await fetch(`${APIURL}/team/school/${school.college}`, {
-      method: 'GET',
-      headers: new Headers({
-        'Content-Type': 'application/json',
-      }),
-    })
+    await fetch(
+      `https://tourney2021-server.herokuapp.com/team/school/${school.college}`,
+      {
+        method: 'GET',
+        headers: new Headers({
+          'Content-Type': 'application/json',
+        }),
+      }
+    )
       .then(response => response.json())
       .then(college => setCollege(college));
     // }
