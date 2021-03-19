@@ -10,7 +10,7 @@ const CollegeIndex = props => {
   const [moreTeamInfo, setMoreTeamInfo] = useState([]);
 
   const fetchColleges = () => {
-    fetch(`${APIURL}/team`, {
+    fetch(`https://tourney2021-server.herokuapp.com/team`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

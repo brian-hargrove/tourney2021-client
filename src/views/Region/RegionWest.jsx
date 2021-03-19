@@ -10,7 +10,7 @@ const RegionWestTable = props => {
   }, []);
 
   const fetchRegions = async () => {
-    await fetch(`${APIURL}/score/region/West`, {
+    await fetch(`https://tourney2021-server.herokuapp.com/score/region/West`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

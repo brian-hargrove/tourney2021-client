@@ -66,7 +66,7 @@ const TeamInput = props => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    fetch(`${APIURL}/team/create`, {
+    fetch(`https://tourney2021-server.herokuapp.com/team/create`, {
       method: 'POST',
       body: JSON.stringify({
         team: {

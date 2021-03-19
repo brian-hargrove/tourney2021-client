@@ -10,7 +10,7 @@ const SchoolIndex = props => {
   const [collegeInfo, setCollegeInfo] = useState([]);
 
   const fetchSchoolInfo = async () => {
-    await fetch(`${APIURL}/team/`, {
+    await fetch(`https://tourney2021-server.herokuapp.com/team/`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

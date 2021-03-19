@@ -10,12 +10,15 @@ const BankersSiteTable = props => {
   }, []);
 
   const fetchRegions = async () => {
-    await fetch(`${APIURL}/score/site/Bankers Life Fieldhouse`, {
-      method: 'GET',
-      headers: new Headers({
-        'Content-Type': 'application/json',
-      }),
-    })
+    await fetch(
+      `https://tourney2021-server.herokuapp.com/score/site/Bankers Life Fieldhouse`,
+      {
+        method: 'GET',
+        headers: new Headers({
+          'Content-Type': 'application/json',
+        }),
+      }
+    )
       .then(response => response.json())
       .then(data => {
         setRegions(data);

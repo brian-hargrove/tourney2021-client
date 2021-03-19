@@ -10,12 +10,15 @@ const SchoolInfo = props => {
   const toggle = () => setModal(!modal);
 
   const fetchSchoolInfo = () => {
-    fetch(`${APIURL}/team/college/${props.SchoolInfo.college}`, {
-      method: 'GET',
-      headers: new Headers({
-        'Content-Type': 'application/json',
-      }),
-    })
+    fetch(
+      `https://tourney2021-server.herokuapp.com/team/college/${props.SchoolInfo.college}`,
+      {
+        method: 'GET',
+        headers: new Headers({
+          'Content-Type': 'application/json',
+        }),
+      }
+    )
       .then(response => response.json())
       .then(info => {
         setCollegeInfo(info);

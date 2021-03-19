@@ -13,12 +13,15 @@ const CollegeMoreInfo = props => {
   const teamMoreInfo = (event, team) => {
     event.preventDefault();
 
-    fetch(`${APIURL}/team/school/${props.moreTeamInfo.college}`, {
-      method: 'GET',
-      headers: new Headers({
-        'Content-Type': 'application/json',
-      }),
-    }).then(response => {
+    fetch(
+      `https://tourney2021-server.herokuapp.com/team/school/${props.moreTeamInfo.college}`,
+      {
+        method: 'GET',
+        headers: new Headers({
+          'Content-Type': 'application/json',
+        }),
+      }
+    ).then(response => {
       props.fetchColleges();
       props.moreInfoOff();
     });

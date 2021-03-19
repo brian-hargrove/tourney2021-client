@@ -8,7 +8,7 @@ const TeamLineup = props => {
   const [college, setCollege] = useState([]);
 
   const fetchTeams = async () => {
-    await fetch(`${process.env.REACT_APP_URL}/team/`, {
+    await fetch(`https://tourney2021-server.herokuapp.com/team/`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

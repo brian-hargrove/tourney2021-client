@@ -10,12 +10,15 @@ const RegionFinalFourTable = props => {
   }, []);
 
   const fetchRegions = async () => {
-    await fetch(`${APIURL}/score/region/Final Four`, {
-      method: 'GET',
-      headers: new Headers({
-        'Content-Type': 'application/json',
-      }),
-    })
+    await fetch(
+      `https://tourney2021-server.herokuapp.com/score/region/Final Four`,
+      {
+        method: 'GET',
+        headers: new Headers({
+          'Content-Type': 'application/json',
+        }),
+      }
+    )
       .then(response => response.json())
       .then(data => {
         setRegions(data);

@@ -11,7 +11,7 @@ const TeamIndex = props => {
   const [teamToUpdate, setTeamToUpdate] = useState([]);
 
   const fetchTeam = () => {
-    fetch(`${APIURL}/team`, {
+    fetch(`https://tourney2021-server.herokuapp.com/team`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

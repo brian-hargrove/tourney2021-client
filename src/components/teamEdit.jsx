@@ -60,42 +60,45 @@ const TeamEdit = props => {
   const teamUpdate = (event, team) => {
     event.preventDefault();
 
-    fetch(`${APIURL}/team/update/${props.teamToUpdate.id}`, {
-      method: 'PUT',
-      body: JSON.stringify({
-        college: editCollege,
-        nickname: editNickname,
-        city: editCity,
-        state: editState,
-        conference: editConference,
-        colors: editColors,
-        headCoach: editHeadCoach,
-        overallWins: editOverallWins,
-        overallLoss: editOverallLoss,
-        confWins: editConfWins,
-        confLoss: editConfLoss,
-        bid: editBid,
-        totalApp: editTotalApp,
-        lastApp: editLastApp,
-        ncaaWin: editNcaaWin,
-        ncaaLoss: editNcaaLoss,
-        bestFinish: editBestFinish,
-        region: editRegion,
-        seed: editSeed,
-        seedWin: editSeedWin,
-        seedLoss: editSeedLoss,
-        websiteLink: editWebsiteLink,
-        scheduleLink: editScheduleLink,
-        roster: editRosterLink,
-        statLink: editStatLink,
-        color1: editColor1,
-        color2: editColor2,
-        logoLink: editLogoLink,
-      }),
-      headers: new Headers({
-        'Content-Type': 'application/json',
-      }),
-    }).then(response => {
+    fetch(
+      `https://tourney2021-server.herokuapp.com/team/update/${props.teamToUpdate.id}`,
+      {
+        method: 'PUT',
+        body: JSON.stringify({
+          college: editCollege,
+          nickname: editNickname,
+          city: editCity,
+          state: editState,
+          conference: editConference,
+          colors: editColors,
+          headCoach: editHeadCoach,
+          overallWins: editOverallWins,
+          overallLoss: editOverallLoss,
+          confWins: editConfWins,
+          confLoss: editConfLoss,
+          bid: editBid,
+          totalApp: editTotalApp,
+          lastApp: editLastApp,
+          ncaaWin: editNcaaWin,
+          ncaaLoss: editNcaaLoss,
+          bestFinish: editBestFinish,
+          region: editRegion,
+          seed: editSeed,
+          seedWin: editSeedWin,
+          seedLoss: editSeedLoss,
+          websiteLink: editWebsiteLink,
+          scheduleLink: editScheduleLink,
+          roster: editRosterLink,
+          statLink: editStatLink,
+          color1: editColor1,
+          color2: editColor2,
+          logoLink: editLogoLink,
+        }),
+        headers: new Headers({
+          'Content-Type': 'application/json',
+        }),
+      }
+    ).then(response => {
       props.fetchTeam();
       props.updateOff();
       alert('Team Info Updated');

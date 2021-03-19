@@ -11,12 +11,15 @@ const April05 = props => {
   }, []);
 
   const fetchDates = async () => {
-    await fetch(`${APIURL}/score/date/2021-04-05`, {
-      method: 'GET',
-      headers: new Headers({
-        'Content-Type': 'application/json',
-      }),
-    })
+    await fetch(
+      `https://tourney2021-server.herokuapp.com/score/date/2021-04-05`,
+      {
+        method: 'GET',
+        headers: new Headers({
+          'Content-Type': 'application/json',
+        }),
+      }
+    )
       .then(response => response.json())
       .then(data => {
         setDates(data);

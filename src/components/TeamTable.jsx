@@ -4,7 +4,7 @@ import APIURL from '../helpers/environment';
 
 const TeamTable = props => {
   const deleteTeam = team => {
-    fetch(`${APIURL}/team/delete/${team.id}`, {
+    fetch(`https://tourney2021-server.herokuapp.com/team/delete/${team.id}`, {
       method: 'DELETE',
       headers: new Headers({
         'Content-Type': 'application/json',
