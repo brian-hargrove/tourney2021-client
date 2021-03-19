@@ -30,7 +30,7 @@ const ScheduleCreate = props => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    fetch(`${APIURL}/score/create`, {
+    fetch(`${process.env.REACT_APP_URL}/score/create`, {
       method: 'POST',
       body: JSON.stringify({
         score: {
