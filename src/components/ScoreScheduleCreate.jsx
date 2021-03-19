@@ -30,7 +30,7 @@ const ScheduleCreate = props => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    fetch(`${process.env.REACT_APP_URL}/score/create`, {
+    fetch(`https://tourney2021-server.herokuapp.com/score/create`, {
       method: 'POST',
       body: JSON.stringify({
         score: {
