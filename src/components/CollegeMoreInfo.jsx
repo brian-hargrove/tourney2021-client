@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
 import '../styles/collegeMoreInfo.css';
+import APIURL from '../helpers/environment';
 
 const CollegeMoreInfo = props => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -12,15 +13,12 @@ const CollegeMoreInfo = props => {
   const teamMoreInfo = (event, team) => {
     event.preventDefault();
 
-    fetch(
-      `${process.env.REACT_APP_URL}/team/school/${props.moreTeamInfo.college}`,
-      {
-        method: 'GET',
-        headers: new Headers({
-          'Content-Type': 'application/json',
-        }),
-      }
-    ).then(response => {
+    fetch(`${APIURL}/team/school/${props.moreTeamInfo.college}`, {
+      method: 'GET',
+      headers: new Headers({
+        'Content-Type': 'application/json',
+      }),
+    }).then(response => {
       props.fetchColleges();
       props.moreInfoOff();
     });
