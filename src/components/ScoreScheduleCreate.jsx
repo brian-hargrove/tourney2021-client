@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
 import APIURL from '../helpers/environment';
+import '../styles/scoreScheduleCreate.css';
 
 const ScheduleCreate = props => {
   const [date, setDate] = useState('');

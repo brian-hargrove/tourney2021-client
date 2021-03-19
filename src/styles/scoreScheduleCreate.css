@@ -1,0 +1,11 @@
+.formSite {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  color: red;
+  margin-left: 25px;
+}
+
+body {
+  padding-left: 50px;
+}
