@@ -43,10 +43,12 @@ const AssemblySiteTable = props => {
     <>
       <div>
         <h1 style={{ textAlign: 'center' }}>Simon Skjodt Assembly Hall</h1>
-        <h5>Location: Bloomington, Indiana</h5>
-        <h5>Home of: Indiana Univeristy Basketball </h5>
-        <h5>Host: Indiana University</h5>
-        <h5>Capacity: 17,222</h5>
+        <h5 style={{ textAlign: 'center' }}>Location: Bloomington, Indiana</h5>
+        <h5 style={{ textAlign: 'center' }}>
+          Home of: Indiana Univeristy Basketball{' '}
+        </h5>
+        <h5 style={{ textAlign: 'center' }}>Host: Indiana University</h5>
+        <h5 style={{ textAlign: 'center' }}>Capacity: 17,222</h5>
         {/* <hr /> */}
         <Table size="md">
           <thead>

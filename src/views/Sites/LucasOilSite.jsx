@@ -43,10 +43,10 @@ const LucasOilSiteTable = props => {
     <>
       <div>
         <h1 style={{ textAlign: 'center' }}>Lucas Oil Stadium</h1>
-        <h5>Location: Indianapolis, Indiana</h5>
-        <h5>Home of: Indianapolis Colts </h5>
-        <h5>Host: Horizon League</h5>
-        <h5>Capacity: 70,000</h5>
+        <h5 style={{ textAlign: 'center' }}>Location: Indianapolis, Indiana</h5>
+        <h5 style={{ textAlign: 'center' }}>Home of: Indianapolis Colts </h5>
+        <h5 style={{ textAlign: 'center' }}>Host: Horizon League</h5>
+        <h5 style={{ textAlign: 'center' }}>Capacity: 70,000</h5>
         {/* <hr /> */}
         <Table size="md">
           <thead>

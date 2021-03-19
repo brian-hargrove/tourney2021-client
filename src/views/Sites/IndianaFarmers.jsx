@@ -43,10 +43,12 @@ const IndianaFarmersSiteTable = props => {
     <>
       <div>
         <h1 style={{ textAlign: 'center' }}>Indiana Farmers Coliseum</h1>
-        <h5>Location: Indianapolis, Indiana</h5>
-        <h5>Home of: IUPUI Basketball, Indy Fuel Ice Hockey </h5>
-        <h5>Host: IUPUI</h5>
-        <h5>Capacity: 6,800</h5>
+        <h5 style={{ textAlign: 'center' }}>Location: Indianapolis, Indiana</h5>
+        <h5 style={{ textAlign: 'center' }}>
+          Home of: IUPUI Basketball, Indy Fuel Ice Hockey{' '}
+        </h5>
+        <h5 style={{ textAlign: 'center' }}>Host: IUPUI</h5>
+        <h5 style={{ textAlign: 'center' }}>Capacity: 6,800</h5>
         {/* <hr /> */}
         <Table size="md">
           <thead>

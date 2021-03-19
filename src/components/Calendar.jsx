@@ -3,10 +3,6 @@ import { Table } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import '../styles/calendar.css';
 const Calendar = props => {
-  const onClick = () => {
-    console.log('click');
-  };
-
   return (
     <div>
       <Table className="calendarTable">

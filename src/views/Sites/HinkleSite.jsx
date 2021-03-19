@@ -43,10 +43,12 @@ const HinkleSiteTable = props => {
     <>
       <div>
         <h1 style={{ textAlign: 'center' }}>Hinkle Fieldhouse</h1>
-        <h5>Location: Indianapolis, Indiana</h5>
-        <h5>Home of: Butler Univeristy Basketball </h5>
-        <h5>Host: Butler University</h5>
-        <h5>Capacity: 9,100</h5>
+        <h5 style={{ textAlign: 'center' }}>Location: Indianapolis, Indiana</h5>
+        <h5 style={{ textAlign: 'center' }}>
+          Home of: Butler Univeristy Basketball{' '}
+        </h5>
+        <h5 style={{ textAlign: 'center' }}>Host: Butler University</h5>
+        <h5 style={{ textAlign: 'center' }}>Capacity: 9,100</h5>
         {/* <hr /> */}
         <Table size="md">
           <thead>

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-// import { Table } from 'reactstrap';
+import React from 'react';
+
 import Calendar from './Calendar';
 import '../styles/home.css';
 

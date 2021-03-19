@@ -5,7 +5,7 @@ const SchoolInfo = props => {
   const [collegeInfo, setCollegeInfo] = useState([]);
   const [modal, setModal] = useState(false);
 
-  const { buttonLabel, fullscreen } = props;
+  const { fullscreen } = props;
   const toggle = () => setModal(!modal);
 
   const fetchSchoolInfo = () => {

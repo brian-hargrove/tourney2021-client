@@ -11,27 +11,18 @@ import '../styles/Navbar.css';
 
 const RegionDropdown = props => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [dropValue, setDropValue] = useState();
-  const toggle = () => setDropdownOpen(prevState => !prevState);
 
-  const saveDropValue = value => {
-    setDropValue(value);
-  };
+  const toggle = () => setDropdownOpen(prevState => !prevState);
 
   return (
     <div>
       <div className="dropdown">
         <div>
           <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-            <DropdownToggle caret>SCHEDULE</DropdownToggle>
+            <DropdownToggle caret>Schedule by Site/Region</DropdownToggle>
             <DropdownMenu id="regionDropdown">
               <DropdownItem>
-                <Link
-                  to="/region/east"
-                  value="east"
-                  onClick={event => setDropValue()}
-                  saveDropValue={saveDropValue}
-                >
+                <Link to="/region/east" value="east">
                   East Region
                 </Link>
               </DropdownItem>
@@ -51,12 +42,7 @@ const RegionDropdown = props => {
                 </Link>
               </DropdownItem>
               <DropdownItem>
-                <Link
-                  to="/region/finalfour"
-                  value="finalfour"
-                  // onClick={event => setDropValue(event.target.value)}
-                  // saveDropValue={dropValue}
-                >
+                <Link to="/region/finalfour" value="finalfour">
                   Final Four/Championship
                 </Link>
               </DropdownItem>

@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
 import '../styles/collegeMoreInfo.css';
 
 const CollegeMoreInfo = props => {
-  const { buttonLabel, className } = props;
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggleModal = e => {

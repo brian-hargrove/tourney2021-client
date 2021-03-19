@@ -4,14 +4,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-// import TeamInput from './components/teamInput';
 import TeamIndex from './components/TeamIndex';
 import ScoreTable from './components/Schedule';
 import TeamLineup from './components/SchoolTable';
-// import TeamTable from './components/TeamTable';
-// import ScheduleCreate from './components/ScoreScheduleCreate';
-// import ScheduleUpdate from './components/ScoreScheduleUpdate';
-// import ScheduleTable from './components/ScoreScheduleTable';
 import ScheduleIndex from './components/ScheduleIndex';
 import RegionEastTable from './views/Region/RegionEast';
 import RegionMidwestTable from './views/Region/RegionMidwest';
@@ -25,7 +20,6 @@ import IndianaFarmersSiteTable from './views/Sites/IndianaFarmers';
 import MackeySiteTable from './views/Sites/MackeySite';
 import LucasOilSiteTable from './views/Sites/LucasOilSite';
 import HinkleSiteTable from './views/Sites/HinkleSite';
-// import CollegeMoreInfo from './components/CollegeIndex';
 import CollegeIndex from './components/CollegeIndex';
 import March18 from './views/Days/March18';
 import March19 from './views/Days/March19';
@@ -40,65 +34,69 @@ import April03 from './views/Days/April03';
 import April05 from './views/Days/April05';
 import Calendar from './components/Calendar';
 
-// import Home from './components/Home';
-
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/region/east" exact component={RegionEastTable} />
-        <Route path="/region/midwest" exact component={RegionMidwestTable} />
-        <Route path="/region/south" exact component={RegionSouthTable} />
-        <Route path="/region/west" exact component={RegionWestTable} />
-        <Route
-          path="/region/finalfour"
-          exact
-          component={RegionFinalFourTable}
-        />
-        <Route path="/teamlineup" exact component={TeamLineup} />
-        <Route path="/schedule" exact component={ScoreTable} />
-        <Route path="/teamTable" exact component={TeamIndex} />
-        <Route path="/scheduleTable" exact component={ScheduleIndex} />
-        <Route path="/schoolinfo" exact component={SchoolIndex} />
-        <Route
-          path="/site/bankerslifefieldhouse"
-          exact
-          component={BankersSiteTable}
-        />
-        <Route
-          path="/site/indianafarmerscoliseum"
-          exact
-          component={IndianaFarmersSiteTable}
-        />
-        <Route
-          path="/site/hinklefieldhouse"
-          exact
-          component={HinkleSiteTable}
-        />
-        <Route
-          path="/site/lucasoilstadium"
-          exact
-          component={LucasOilSiteTable}
-        />
-        <Route path="/site/mackeyarena" exact component={MackeySiteTable} />
-        <Route path="/site/assemblyhall" exact component={AssemblySiteTable} />
-        <Route path="/collegeinfo" exact component={CollegeIndex} />
-        <Route path="/march18" exact component={March18} />
-        <Route path="/march19" exact component={March19} />
-        <Route path="/march20" exact component={March20} />
-        <Route path="/march21" exact component={March21} />
-        <Route path="/march22" exact component={March22} />
-        <Route path="/march27" exact component={March27} />
-        <Route path="/march28" exact component={March28} />
-        <Route path="/march29" exact component={March29} />
-        <Route path="/march30" exact component={March30} />
-        <Route path="/april03" exact component={April03} />
-        <Route path="/april05" exact component={April05} />
-        <Route path="/calendar" exact component={Calendar} />
-      </Switch>
-    </Router>
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/region/east" exact component={RegionEastTable} />
+          <Route path="/region/midwest" exact component={RegionMidwestTable} />
+          <Route path="/region/south" exact component={RegionSouthTable} />
+          <Route path="/region/west" exact component={RegionWestTable} />
+          <Route
+            path="/region/finalfour"
+            exact
+            component={RegionFinalFourTable}
+          />
+          <Route path="/teamlineup" exact component={TeamLineup} />
+          <Route path="/schedule" exact component={ScoreTable} />
+          <Route path="/teamTable" exact component={TeamIndex} />
+          <Route path="/scheduleTable" exact component={ScheduleIndex} />
+          <Route path="/schoolinfo" exact component={SchoolIndex} />
+          <Route
+            path="/site/bankerslifefieldhouse"
+            exact
+            component={BankersSiteTable}
+          />
+          <Route
+            path="/site/indianafarmerscoliseum"
+            exact
+            component={IndianaFarmersSiteTable}
+          />
+          <Route
+            path="/site/hinklefieldhouse"
+            exact
+            component={HinkleSiteTable}
+          />
+          <Route
+            path="/site/lucasoilstadium"
+            exact
+            component={LucasOilSiteTable}
+          />
+          <Route path="/site/mackeyarena" exact component={MackeySiteTable} />
+          <Route
+            path="/site/assemblyhall"
+            exact
+            component={AssemblySiteTable}
+          />
+          <Route path="/collegeinfo" exact component={CollegeIndex} />
+          <Route path="/march18" exact component={March18} />
+          <Route path="/march19" exact component={March19} />
+          <Route path="/march20" exact component={March20} />
+          <Route path="/march21" exact component={March21} />
+          <Route path="/march22" exact component={March22} />
+          <Route path="/march27" exact component={March27} />
+          <Route path="/march28" exact component={March28} />
+          <Route path="/march29" exact component={March29} />
+          <Route path="/march30" exact component={March30} />
+          <Route path="/april03" exact component={April03} />
+          <Route path="/april05" exact component={April05} />
+          <Route path="/calendar" exact component={Calendar} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 

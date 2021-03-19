@@ -43,10 +43,14 @@ const MackeySiteTable = props => {
     <>
       <div>
         <h1 style={{ textAlign: 'center' }}>Mackey Arena</h1>
-        <h5>Location: West Lafayette, Indiana</h5>
-        <h5>Home of: Purdue Univeristy Basketball </h5>
-        <h5>Host: Purdue University</h5>
-        <h5>Capacity: 14,804</h5>
+        <h5 style={{ textAlign: 'center' }}>
+          Location: West Lafayette, Indiana
+        </h5>
+        <h5 style={{ textAlign: 'center' }}>
+          Home of: Purdue Univeristy Basketball{' '}
+        </h5>
+        <h5 style={{ textAlign: 'center' }}>Host: Purdue University</h5>
+        <h5 style={{ textAlign: 'center' }}>Capacity: 14,804</h5>
         {/* <hr /> */}
         <Table size="md">
           <thead>

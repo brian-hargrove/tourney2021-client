@@ -2,47 +2,39 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import '../styles/Navbar.css';
-// import CollegeDropdown from './CollegeDropdown';
 import RegionDropdown from './RegionDropdown';
 
 const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <div className="dropdown">
-          {/* <CollegeDropdown /> */}
-          <RegionDropdown />
-        </div>
-        <li>
+        <div className="dropdown"></div>
+        <oi>
           <Link to="/" className="link">
             Home
           </Link>
-        </li>
-        <li>
+        </oi>
+        <oi>
           <Link to="/collegeinfo" className="link">
             Colleges
           </Link>
-        </li>
-        <li>
+        </oi>
+        <oi>
           <Link to="/calendar" className="link">
             Calendar
           </Link>
-        </li>
-        <li>
-          <Link to="/schedule" className="link">
-            Schedule
-          </Link>
-        </li>
-        <li>
+        </oi>
+        <RegionDropdown />
+        <oi>
           <Link to="/teamtable" className="link">
             Team Input
           </Link>
-        </li>
-        <li>
+        </oi>
+        <oi>
           <Link to="/scheduletable" className="link">
             Schedule Update
           </Link>
-        </li>
+        </oi>
       </nav>
     </>
   );

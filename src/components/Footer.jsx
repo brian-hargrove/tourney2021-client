@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <Row>
-        <p>$copy; Brian Hargrove 2021</p>
+        <p style={{ textAlign: 'center' }}> Copyright Brian Hargrove 2021</p>
       </Row>
     </footer>
   );

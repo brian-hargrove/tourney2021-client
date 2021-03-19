@@ -43,10 +43,10 @@ const BankersSiteTable = props => {
     <>
       <div>
         <h1 style={{ textAlign: 'center' }}>Bankers Life Fieldhouse</h1>
-        <h5>Location: Indianapolis, Indiana</h5>
-        <h5>Home of: Indiana Pacers </h5>
-        <h5>Host: Ball State University</h5>
-        <h5>Capacity: 17,923</h5>
+        <h5 style={{ textAlign: 'center' }}>Location: Indianapolis, Indiana</h5>
+        <h5 style={{ textAlign: 'center' }}>Home of: Indiana Pacers </h5>
+        <h5 style={{ textAlign: 'center' }}>Host: Ball State University</h5>
+        <h5 style={{ textAlign: 'center' }}>Capacity: 17,923</h5>
         {/* <hr /> */}
         <Table size="md">
           <thead>
