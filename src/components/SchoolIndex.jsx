@@ -9,7 +9,7 @@ const SchoolIndex = props => {
   const [collegeInfo, setCollegeInfo] = useState([]);
 
   const fetchSchoolInfo = async () => {
-    await fetch(`http://localhost:3000/team/`, {
+    await fetch(`${process.env.REACT_APP_URL}/team/`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',
@@ -63,66 +63,3 @@ const SchoolIndex = props => {
 };
 
 export default SchoolIndex;
-
-// const SchoolIndex = props => {
-//   const [getInfo, setGetInfo] = useState([]);
-//   const [infoActive, setInfoActive] = useState(false);
-
-//   const fetchSchoolInfo = () => {
-//     fetch(`http://localhost:3000/team/`, {
-//       method: 'GET',
-//       headers: new Headers({
-//         'Content-Type': 'application/json',
-//       }),
-//     })
-//       .then(response => response.json())
-//       .then(schInfo => {
-//         setGetInfo(schInfo);
-//         console.log('march:', schInfo);
-//       });
-//   };
-
-//   const infoOn = () => {
-//     setInfoActive(true);
-//   };
-
-//   const infoOff = () => {
-//     setInfoActive(false);
-//   };
-
-//   useEffect(() => {
-//     fetchMoreSchoolInfo();
-//   });
-
-//   const getMoreSchoolInfo = schInfo => {
-//     setGetInfo();
-//   };
-
-//   return (
-//     <>
-//       <Container>
-//         <Row>
-//           <Col fluid="lg">
-//             <TeamLineup
-//               getInfo={getInfo}
-//               infoOn={infoOn}
-//               getMoreSchoolInfo={getMoreSchoolInfo}
-//               // fetchMoreSchoolInfo={fetchMoreSchoolInfo}
-//             />
-//           </Col>
-//           {infoActive ? (
-//             <SchoolInfo
-//               getMoreSchoolInfo={getMoreSchoolInfo}
-//               infoOff={infoOff}
-//               // fetchMoreSchoolInfo={fetchMoreSchoolInfo}
-//             />
-//           ) : (
-//             <></>
-//           )}
-//         </Row>
-//       </Container>
-//     </>
-//   );
-// };
-
-// export default SchoolIndex;

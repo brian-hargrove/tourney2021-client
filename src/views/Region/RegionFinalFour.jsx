@@ -9,7 +9,7 @@ const RegionFinalFourTable = props => {
   }, []);
 
   const fetchRegions = async () => {
-    await fetch(`http://localhost:3000/score/region/Final Four`, {
+    await fetch(`${process.env.REACT_APP_URL}/score/region/Final Four`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

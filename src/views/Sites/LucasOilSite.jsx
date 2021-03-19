@@ -9,7 +9,7 @@ const LucasOilSiteTable = props => {
   }, []);
 
   const fetchRegions = async () => {
-    await fetch(`http://localhost:3000/score/site/Lucas Oil Stadium`, {
+    await fetch(`${process.env.REACT_APP_URL}/score/site/Lucas Oil Stadium`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

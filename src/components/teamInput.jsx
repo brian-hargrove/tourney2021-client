@@ -65,7 +65,7 @@ const TeamInput = props => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    fetch('http://localhost:3000/team/create', {
+    fetch(`${process.env.REACT_APP_URL}/team/create`, {
       method: 'POST',
       body: JSON.stringify({
         team: {

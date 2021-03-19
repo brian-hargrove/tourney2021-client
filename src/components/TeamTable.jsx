@@ -3,7 +3,7 @@ import { Table, Button } from 'reactstrap';
 
 const TeamTable = props => {
   const deleteTeam = team => {
-    fetch(`http://localhost:3000/team/delete/${team.id}`, {
+    fetch(`${process.env.REACT_APP_URL}/team/delete/${team.id}`, {
       method: 'DELETE',
       headers: new Headers({
         'Content-Type': 'application/json',

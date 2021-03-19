@@ -8,7 +8,6 @@ const CollegeCards = props => {
     return (
       <Card
         style={{
-          //   width: '18rem',
           color: `${schoolInfo.color2}`,
           backgroundColor: `${schoolInfo.color1}`,
         }}

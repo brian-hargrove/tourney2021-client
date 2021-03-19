@@ -59,7 +59,7 @@ const TeamEdit = props => {
   const teamUpdate = (event, team) => {
     event.preventDefault();
 
-    fetch(`http://localhost:3000/team/update/${props.teamToUpdate.id}`, {
+    fetch(`${process.env.REACT_APP_URL}/team/update/${props.teamToUpdate.id}`, {
       method: 'PUT',
       body: JSON.stringify({
         college: editCollege,

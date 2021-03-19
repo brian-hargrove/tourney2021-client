@@ -9,12 +9,15 @@ const BankersSiteTable = props => {
   }, []);
 
   const fetchRegions = async () => {
-    await fetch(`http://localhost:3000/score/site/Bankers Life Fieldhouse`, {
-      method: 'GET',
-      headers: new Headers({
-        'Content-Type': 'application/json',
-      }),
-    })
+    await fetch(
+      `${process.env.REACT_APP_URL}/score/site/Bankers Life Fieldhouse`,
+      {
+        method: 'GET',
+        headers: new Headers({
+          'Content-Type': 'application/json',
+        }),
+      }
+    )
       .then(response => response.json())
       .then(data => {
         setRegions(data);

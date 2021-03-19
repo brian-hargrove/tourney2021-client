@@ -10,7 +10,7 @@ const TeamIndex = props => {
   const [teamToUpdate, setTeamToUpdate] = useState([]);
 
   const fetchTeam = () => {
-    fetch(`http://localhost:3000/team`, {
+    fetch(`${process.env.REACT_APP_URL}/team`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

@@ -9,7 +9,7 @@ const RegionMidwestTable = props => {
   }, []);
 
   const fetchRegions = async () => {
-    await fetch(`http://localhost:3000/score/region/Midwest`, {
+    await fetch(`${process.env.REACT_APP_URL}/score/region/Midwest`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

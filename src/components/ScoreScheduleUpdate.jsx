@@ -26,24 +26,27 @@ const ScheduleEdit = props => {
 
   const scheduleUpdate = (event, score) => {
     event.preventDefault();
-    fetch(`http://localhost:3000/score/update/${props.scheduleToUpdate.id}`, {
-      method: 'PUT',
-      body: JSON.stringify({
-        date: editDate,
-        time: editTime,
-        tvStation: editTvStation,
-        region: editRegion,
-        round: editRound,
-        site: editSite,
-        team1: editTeam1,
-        score1: editScore1,
-        team2: editTeam2,
-        score2: editScore2,
-      }),
-      headers: new Headers({
-        'Content-Type': 'application/json',
-      }),
-    }).then(response => {
+    fetch(
+      `${process.env.REACT_APP_URL}/score/update/${props.scheduleToUpdate.id}`,
+      {
+        method: 'PUT',
+        body: JSON.stringify({
+          date: editDate,
+          time: editTime,
+          tvStation: editTvStation,
+          region: editRegion,
+          round: editRound,
+          site: editSite,
+          team1: editTeam1,
+          score1: editScore1,
+          team2: editTeam2,
+          score2: editScore2,
+        }),
+        headers: new Headers({
+          'Content-Type': 'application/json',
+        }),
+      }
+    ).then(response => {
       props.fetchSchedule();
       props.updateOff();
       alert('Score updated');

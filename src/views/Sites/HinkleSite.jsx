@@ -9,7 +9,7 @@ const HinkleSiteTable = props => {
   }, []);
 
   const fetchRegions = async () => {
-    await fetch(`http://localhost:3000/score/site/Hinkle Fieldhouse`, {
+    await fetch(`${process.env.REACT_APP_URL}/score/site/Hinkle Fieldhouse`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

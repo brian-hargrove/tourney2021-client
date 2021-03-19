@@ -11,7 +11,7 @@ const CollegeIndex = props => {
   const [moreTeamInfo, setMoreTeamInfo] = useState([]);
 
   const fetchColleges = () => {
-    fetch(`http://localhost:3000/team`, {
+    fetch(`${process.env.REACT_APP_URL}/team`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

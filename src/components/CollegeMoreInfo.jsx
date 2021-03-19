@@ -12,12 +12,15 @@ const CollegeMoreInfo = props => {
   const teamMoreInfo = (event, team) => {
     event.preventDefault();
 
-    fetch(`http://localhost:3000/team/school/${props.moreTeamInfo.college}`, {
-      method: 'GET',
-      headers: new Headers({
-        'Content-Type': 'application/json',
-      }),
-    }).then(response => {
+    fetch(
+      `${process.env.REACT_APP_URL}/team/school/${props.moreTeamInfo.college}`,
+      {
+        method: 'GET',
+        headers: new Headers({
+          'Content-Type': 'application/json',
+        }),
+      }
+    ).then(response => {
       props.fetchColleges();
       props.moreInfoOff();
     });

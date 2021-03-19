@@ -9,12 +9,15 @@ const SchoolInfo = props => {
   const toggle = () => setModal(!modal);
 
   const fetchSchoolInfo = () => {
-    fetch(`http://localhost:3000/team/college/${props.SchoolInfo.college}`, {
-      method: 'GET',
-      headers: new Headers({
-        'Content-Type': 'application/json',
-      }),
-    })
+    fetch(
+      `${process.env.REACT_APP_URL}/team/college/${props.SchoolInfo.college}`,
+      {
+        method: 'GET',
+        headers: new Headers({
+          'Content-Type': 'application/json',
+        }),
+      }
+    )
       .then(response => response.json())
       .then(info => {
         setCollegeInfo(info);

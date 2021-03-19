@@ -10,7 +10,7 @@ const April03 = props => {
   }, []);
 
   const fetchDates = async () => {
-    await fetch(`http://localhost:3000/score/date/2021-04-03`, {
+    await fetch(`${process.env.REACT_APP_URL}/score/date/2021-04-03`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

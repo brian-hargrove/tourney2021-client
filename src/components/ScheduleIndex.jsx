@@ -10,7 +10,7 @@ const ScheduleIndex = props => {
   const [scheduleToUpdate, setScheduleToUpdate] = useState([]);
 
   const fetchSchedule = () => {
-    fetch(`http://localhost:3000/score/`, {
+    fetch(`${process.env.REACT_APP_URL}/score/`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',
