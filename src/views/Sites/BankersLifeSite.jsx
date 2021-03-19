@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'reactstrap';
+import APIURL from '../../helpers/environment';
 
 const BankersSiteTable = props => {
   const [regions, setRegions] = useState([]);
@@ -9,15 +10,12 @@ const BankersSiteTable = props => {
   }, []);
 
   const fetchRegions = async () => {
-    await fetch(
-      `${process.env.REACT_APP_URL}/score/site/Bankers Life Fieldhouse`,
-      {
-        method: 'GET',
-        headers: new Headers({
-          'Content-Type': 'application/json',
-        }),
-      }
-    )
+    await fetch(`${APIURL}/score/site/Bankers Life Fieldhouse`, {
+      method: 'GET',
+      headers: new Headers({
+        'Content-Type': 'application/json',
+      }),
+    })
       .then(response => response.json())
       .then(data => {
         setRegions(data);

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
 import '../styles/teamInput.css';
+import APIURL from '../helpers/environment';
 
 const TeamInput = props => {
   const [college, setCollege] = useState('');
@@ -65,7 +66,7 @@ const TeamInput = props => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    fetch(`${process.env.REACT_APP_URL}/team/create`, {
+    fetch(`${APIURL}/team/create`, {
       method: 'POST',
       body: JSON.stringify({
         team: {

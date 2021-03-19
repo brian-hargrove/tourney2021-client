@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Col, Row } from 'reactstrap';
 import SchoolInfo from './SchoolInfo';
 import TeamLineup from './SchoolTable';
+import APIURL from '../helpers/environment';
 
 const SchoolIndex = props => {
   const [schoolInfo, setSchoolInfo] = useState([]);
@@ -9,7 +10,7 @@ const SchoolIndex = props => {
   const [collegeInfo, setCollegeInfo] = useState([]);
 
   const fetchSchoolInfo = async () => {
-    await fetch(`${process.env.REACT_APP_URL}/team/`, {
+    await fetch(`${APIURL}/team/`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

@@ -9,6 +9,7 @@ import {
   ModalBody,
   ModalHeader,
 } from 'reactstrap';
+import APIURL from '../helpers/environment';
 
 const TeamEdit = props => {
   const [editCollege, setEditCollege] = useState(props.teamToUpdate.college);
@@ -59,7 +60,7 @@ const TeamEdit = props => {
   const teamUpdate = (event, team) => {
     event.preventDefault();
 
-    fetch(`${process.env.REACT_APP_URL}/team/update/${props.teamToUpdate.id}`, {
+    fetch(`${APIURL}/team/update/${props.teamToUpdate.id}`, {
       method: 'PUT',
       body: JSON.stringify({
         college: editCollege,

@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import ScheduleCreate from './ScoreScheduleCreate';
 import ScheduleTable from './ScoreScheduleTable';
 import ScheduleEdit from './ScoreScheduleUpdate';
+import APIURL from '../helpers/environment';
 
 const ScheduleIndex = props => {
   const [scores, setScores] = useState([]);
@@ -10,7 +11,7 @@ const ScheduleIndex = props => {
   const [scheduleToUpdate, setScheduleToUpdate] = useState([]);
 
   const fetchSchedule = () => {
-    fetch(`${process.env.REACT_APP_URL}/score/`, {
+    fetch(`${APIURL}/score/`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

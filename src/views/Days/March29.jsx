@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'reactstrap';
 import DateDropdown from '../../components/DateDropdown';
+import APIURL from '../../helpers/environment';
 
 const March29 = props => {
   const [dates, setDates] = useState([]);
@@ -10,7 +11,7 @@ const March29 = props => {
   }, []);
 
   const fetchDates = async () => {
-    await fetch(`${process.env.REACT_APP_URL}/score/date/2021-03-29`, {
+    await fetch(`${APIURL}/score/date/2021-03-29`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

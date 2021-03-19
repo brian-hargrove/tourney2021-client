@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'reactstrap';
+import APIURL from '../helpers/environment';
 
 // import RegionDropdown from '../components/RegionDropdown';
 
@@ -9,7 +10,7 @@ const ScoreTable = props => {
   const [scheduleData, setScheduleData] = useState([]);
 
   const fetchSchedule = async () => {
-    await fetch(`${process.env.REACT_APP_URL}/score/`, {
+    await fetch(`${APIURL}/score/`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

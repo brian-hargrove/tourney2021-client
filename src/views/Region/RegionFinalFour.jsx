@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'reactstrap';
+import APIURL from '../../helpers/environment';
 
 const RegionFinalFourTable = props => {
   const [regions, setRegions] = useState([]);
@@ -9,7 +10,7 @@ const RegionFinalFourTable = props => {
   }, []);
 
   const fetchRegions = async () => {
-    await fetch(`${process.env.REACT_APP_URL}/score/region/Final Four`, {
+    await fetch(`${APIURL}/score/region/Final Four`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'reactstrap';
+import APIURL from '../../helpers/environment';
 
 const LucasOilSiteTable = props => {
   const [regions, setRegions] = useState([]);
@@ -9,7 +10,7 @@ const LucasOilSiteTable = props => {
   }, []);
 
   const fetchRegions = async () => {
-    await fetch(`${process.env.REACT_APP_URL}/score/site/Lucas Oil Stadium`, {
+    await fetch(`${APIURL}/score/site/Lucas Oil Stadium`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

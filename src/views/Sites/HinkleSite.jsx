@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'reactstrap';
+import APIURL from '../../helpers/environment';
 
 const HinkleSiteTable = props => {
   const [regions, setRegions] = useState([]);
@@ -9,7 +10,7 @@ const HinkleSiteTable = props => {
   }, []);
 
   const fetchRegions = async () => {
-    await fetch(`${process.env.REACT_APP_URL}/score/site/Hinkle Fieldhouse`, {
+    await fetch(`${APIURL}/score/site/Hinkle Fieldhouse`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

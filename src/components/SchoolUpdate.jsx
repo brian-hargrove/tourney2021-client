@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import APIURL from '../helpers/environment';
 
 const SchoolGet = props => {
   const getCollege = (event, school) => {
     event.preventDefault();
-    fetch(`${process.env.REACT_APP_URL}/team/school/${props.college}`, {
+    fetch(`${APIURL}/team/school/${props.college}`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

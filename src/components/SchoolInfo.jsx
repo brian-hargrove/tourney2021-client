@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import APIURL from '../helpers/environment';
 
 const SchoolInfo = props => {
   const [collegeInfo, setCollegeInfo] = useState([]);
@@ -9,15 +10,12 @@ const SchoolInfo = props => {
   const toggle = () => setModal(!modal);
 
   const fetchSchoolInfo = () => {
-    fetch(
-      `${process.env.REACT_APP_URL}/team/college/${props.SchoolInfo.college}`,
-      {
-        method: 'GET',
-        headers: new Headers({
-          'Content-Type': 'application/json',
-        }),
-      }
-    )
+    fetch(`${APIURL}/team/college/${props.SchoolInfo.college}`, {
+      method: 'GET',
+      headers: new Headers({
+        'Content-Type': 'application/json',
+      }),
+    })
       .then(response => response.json())
       .then(info => {
         setCollegeInfo(info);

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Card, CardBody, CardSubtitle, CardTitle } from 'reactstrap';
 import '../styles/Team.css';
+import APIURL from '../helpers/environment';
 
 const TeamLineup = props => {
   const [school, setSchool] = useState([]);
@@ -29,7 +30,7 @@ const TeamLineup = props => {
   const handleClick = async event => {
     event.preventDefault();
 
-    await fetch(`${process.env.REACT_APP_URL}/team/school/${school.college}`, {
+    await fetch(`${APIURL}/team/school/${school.college}`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

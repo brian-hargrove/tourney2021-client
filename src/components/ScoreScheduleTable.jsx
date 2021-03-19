@@ -1,9 +1,10 @@
 import React from 'react';
 import { Table, Button } from 'reactstrap';
+import APIURL from '../helpers/environment';
 
 const ScheduleTable = props => {
   const deleteSchedule = score => {
-    fetch(`${process.env.REACT_APP_URL}/score/delete/${score.id}`, {
+    fetch(`${APIURL}/score/delete/${score.id}`, {
       method: 'DELETE',
       headers: new Headers({
         'Content-Type': ' application/json',

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Table, Button } from 'reactstrap';
+import APIURL from '../helpers/environment';
 
 const TeamTable = props => {
   const deleteTeam = team => {
-    fetch(`${process.env.REACT_APP_URL}/team/delete/${team.id}`, {
+    fetch(`${APIURL}/team/delete/${team.id}`, {
       method: 'DELETE',
       headers: new Headers({
         'Content-Type': 'application/json',

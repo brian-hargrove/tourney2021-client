@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Col, Container } from 'reactstrap';
-
 import CollegeCards from './CollegeCards';
-
 import CollegeMoreInfo from './CollegeMoreInfo';
+import APIURL from '../helpers/environment';
 
 const CollegeIndex = props => {
   const [schools, setSchools] = useState([]);
@@ -11,7 +10,7 @@ const CollegeIndex = props => {
   const [moreTeamInfo, setMoreTeamInfo] = useState([]);
 
   const fetchColleges = () => {
-    fetch(`${process.env.REACT_APP_URL}/team`, {
+    fetch(`${APIURL}/team`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

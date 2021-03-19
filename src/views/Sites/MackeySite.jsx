@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'reactstrap';
+import APIURL from '../../helpers/environment';
 
 const MackeySiteTable = props => {
   const [regions, setRegions] = useState([]);
@@ -9,7 +10,7 @@ const MackeySiteTable = props => {
   }, []);
 
   const fetchRegions = async () => {
-    await fetch(`${process.env.REACT_APP_URL}/score/site/Mackey Arena`, {
+    await fetch(`${APIURL}/score/site/Mackey Arena`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',

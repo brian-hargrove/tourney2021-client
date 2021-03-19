@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
+import APIURL from '../helpers/environment';
 
 const ScheduleCreate = props => {
   const [date, setDate] = useState('');
@@ -29,7 +30,7 @@ const ScheduleCreate = props => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    fetch(`${process.env.REACT_APP_URL}/score/create`, {
+    fetch(`${APIURL}/score/create`, {
       method: 'POST',
       body: JSON.stringify({
         score: {

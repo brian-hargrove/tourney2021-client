@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import TeamInput from './teamInput';
 import TeamTable from './TeamTable';
 import TeamEdit from './teamEdit';
+import APIURL from '../helpers/environment';
 
 const TeamIndex = props => {
   const [teams, setTeams] = useState([]);
@@ -10,7 +11,7 @@ const TeamIndex = props => {
   const [teamToUpdate, setTeamToUpdate] = useState([]);
 
   const fetchTeam = () => {
-    fetch(`${process.env.REACT_APP_URL}/team`, {
+    fetch(`${APIURL}/team`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',
