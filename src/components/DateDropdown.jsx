@@ -19,7 +19,7 @@ const DateDropdown = props => {
       <div className="dropdown">
         <div>
           <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-            <DropdownToggle caret>SCHEDULE</DropdownToggle>
+            <DropdownToggle caret>Schedule by Day</DropdownToggle>
             <DropdownMenu id="dateDropdown">
               <DropdownItem>
                 <Link to="/march18">March 18</Link>

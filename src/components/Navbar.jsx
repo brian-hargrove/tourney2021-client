@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import '../styles/Navbar.css';
 import RegionDropdown from './RegionDropdown';
+import DateDropdown from './DateDropdown';
 
 const Navbar = () => {
   return (
@@ -16,16 +17,17 @@ const Navbar = () => {
         </oi>
         <oi>
           <Link to="/collegeinfo" className="link">
-            Colleges
+            Schools
           </Link>
         </oi>
-        <oi>
+        {/* <oi>
           <Link to="/calendar" className="link">
             Calendar
           </Link>
-        </oi>
+        </oi> */}
         <RegionDropdown />
-        <oi>
+        <DateDropdown />
+        {/* <oi>
           <Link to="/teamtable" className="link">
             Team Input
           </Link>
@@ -44,7 +46,7 @@ const Navbar = () => {
           <Link to="teaminput" classname="link">
             Team Create
           </Link>
-        </oi>
+        </oi> */}
       </nav>
     </>
   );

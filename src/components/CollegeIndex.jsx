@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Container } from 'reactstrap';
+import { Col, Container, Row } from 'reactstrap';
 import CollegeCards from './CollegeCards';
 import CollegeMoreInfo from './CollegeMoreInfo';
 import APIURL from '../helpers/environment';
@@ -38,7 +38,7 @@ const CollegeIndex = props => {
   }, []);
 
   return (
-    <Container>
+    <Container className="themed-container" fluid={true}>
       <Col>
         <CollegeCards
           schools={schools}
