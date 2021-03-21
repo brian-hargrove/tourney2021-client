@@ -63,7 +63,7 @@ const RegionFinalFourTable = props => {
         </td>
         <td
           style={
-            data.score > data.score1
+            data.score2 > data.score1
               ? { backgroundColor: 'gold', color: 'darkblue' }
               : null
           }
