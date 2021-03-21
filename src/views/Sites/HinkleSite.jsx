@@ -35,10 +35,42 @@ const HinkleSiteTable = props => {
         <td>{data.region}</td>
         <td>{data.round}</td>
         {/* <td>{data.site}</td> */}
-        <td>{data.team1}</td>
-        <td>{data.score1}</td>
-        <td>{data.team2}</td>
-        <td>{data.score2}</td>
+        <td
+          style={
+            data.score1 > data.score2
+              ? { backgroundColor: 'gold', color: 'darkblue' }
+              : null
+          }
+        >
+          {data.team1}
+        </td>
+        <td
+          style={
+            data.score1 > data.score2
+              ? { backgroundColor: 'gold', color: 'darkblue' }
+              : null
+          }
+        >
+          {data.score1}
+        </td>
+        <td
+          style={
+            data.score2 > data.score1
+              ? { backgroundColor: 'gold', color: 'darkblue' }
+              : null
+          }
+        >
+          {data.team2}
+        </td>
+        <td
+          style={
+            data.score > data.score1
+              ? { backgroundColor: 'gold', color: 'darkblue' }
+              : null
+          }
+        >
+          {data.score2}
+        </td>
       </tr>
     );
   });
